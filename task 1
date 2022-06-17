@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+<h1>Personal Data</h1>
+
+<form method="POST" name="sample">
+<br>
+    Username: <input type="text" name="username"> 
+    Email ID: <input type="text" name="emailid">
+    <br><br>
+    <input type="button" name="add" value="Submit" onclick="addPersonal();"><hr>
+
+            <table id="tbl" class="table" border="1" style="background-color:#3d7eb7">
+                <thead>
+                <th>Username</th> 
+                <th>EmailID</th>
+               
+                </thead>
+                
+                 <tbody>
+                     
+                 </tbody>
+             </table>
+
+</form>
+
+ <script type="text/javascript">
+       
+    function addPersonal()
+    { 
+        var username=document.sample.username.value; 
+        var emailid=document.sample.emailid.value; 
+        
+        var tr = document.createElement('tr');
+        
+        var td1 = tr.appendChild(document.createElement('td'));
+        var td2 = tr.appendChild(document.createElement('td'));
+        
+        
+        td1.innerHTML=username;
+        td2.innerHTML=emailid;
+
+        document.getElementById("tbl").appendChild(tr);
+    }
+
+    
+    
+    </script>
+    </body>
+</html>
+
+
